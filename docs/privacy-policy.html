@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — LibreGeoTag</title>
+<style>
+  :root {
+    --ink: #2a241d;
+    --muted: #6f6558;
+    --paper: #fcf8f1;
+    --rule: #e4dccd;
+    --link: #7a4a1d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece6dc;
+      --muted: #a49a8c;
+      --paper: #1b1815;
+      --rule: #332e28;
+      --link: #e0a874;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 3rem 1.5rem 5rem;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 40rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.15rem; margin: 2.6rem 0 .6rem; letter-spacing: -.01em; }
+  h3 { font-size: 1rem; margin: 1.8rem 0 .4rem; }
+  p, li { margin: 0 0 .85rem; }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: .45rem; }
+  .updated { color: var(--muted); margin: 0 0 2rem; font-size: .95rem; }
+  .lede { font-size: 1.05rem; }
+  a { color: var(--link); text-underline-offset: .18em; }
+  table { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: .55rem .7rem; border-bottom: 1px solid var(--rule); }
+  th { font-weight: 600; white-space: nowrap; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  footer { color: var(--muted); font-size: .9rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .9em; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy policy</h1>
+<p class="updated">LibreGeoTag · last updated 19 November 2026</p>
+
+<p class="lede">LibreGeoTag turns a photograph into a location memory image. It is
+built to work without an account and without sending your photographs anywhere.
+This page describes exactly what the app does with your information — and,
+mostly, what it does not do.</p>
+
+<h2>In short</h2>
+<ul>
+  <li>No account, no sign-in, no profile.</li>
+  <li>No analytics, no advertising, no crash reporting, no tracking.</li>
+  <li>Your photographs never leave your device.</li>
+  <li>Location is read once, only when you ask for it, and never in the background.</li>
+  <li>The only network request the app can make is an address lookup from
+      coordinates, and only when you tap that button.</li>
+</ul>
+
+<h2>What stays on your device</h2>
+<p>The photograph you choose is read from where it lives and is never modified,
+moved, or overwritten. A new image is written only when you tap Save or Share.</p>
+
+<p>The location you attach, the address text, the note, and the date exist only
+in memory while the editor is open. The app keeps no history, no log, and no
+database of where you have been; closing the editor discards them.</p>
+
+<p>Images you save go to your device's photo gallery, where they are visible to
+other apps that can read the gallery, exactly like any other photograph you
+save. Sharing hands the image to the app you choose.</p>
+
+<h2>What leaves your device</h2>
+
+<h3>Address lookup</h3>
+<p>When you tap the button that looks up an address, the app sends the
+coordinates of the chosen location to Photon
+(<a href="https://photon.komoot.io/">photon.komoot.io</a>), a geocoding service
+operated by komoot, which answers with a place name derived from OpenStreetMap
+data.</p>
+
+<p>That request carries the coordinates and the information any HTTPS request
+carries: your IP address and the app's user-agent string. It carries nothing
+else — no photograph, no note, no device identifier, no account.</p>
+
+<p>If you never tap the lookup, no request is made. The app works fully offline:
+you can choose a location and type an address by hand. How Photon handles that
+request is governed by its operator's privacy policy, not this one.</p>
+
+<h3>Sharing</h3>
+<p>When you tap Share, the finished image is passed to your device's share
+sheet and you choose the destination. Whichever app you pick then receives the
+image and handles it under its own terms. LibreGeoTag uploads nothing itself.</p>
+
+<h2>What the app does not do</h2>
+<ul>
+  <li>It does not collect your name, email address, phone number, or contacts.</li>
+  <li>It does not use analytics, telemetry, crash reporting, or advertising
+      SDKs, and does not read advertising identifiers.</li>
+  <li>It does not request background location, record a location history, or
+      set up geofences.</li>
+  <li>It does not upload, back up, or sync your photographs.</li>
+  <li>It does not sell or share data with data brokers.</li>
+</ul>
+
+<h2>Permissions and why they exist</h2>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Location (approximate and precise)</td>
+      <td>To attach the place you are at, and only after you tap “Use my
+          location”. Denying it leaves the app fully usable with a manually
+          chosen location.</td>
+    </tr>
+    <tr>
+      <td>Storage (Android 9 and older only)</td>
+      <td>To save the finished image to your gallery. Newer Android versions
+          need no permission for this.</td>
+    </tr>
+    <tr>
+      <td>Internet</td>
+      <td>To look up an address. Nothing else uses it.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The app has no camera or microphone permission. Taking a photograph opens
+your device's own camera app, and the resulting image is handled like any other
+photograph you pick.</p>
+
+<h2>Children</h2>
+<p>LibreGeoTag is not directed at children. It does not knowingly collect
+personal information from anyone, including children.</p>
+
+<h2>Changes to this policy</h2>
+<p>If the app's behaviour changes in a way that affects this policy, this page
+will be updated and the date at the top changed. The project's git history keeps
+every earlier version.</p>
+
+<h2>Verifying this yourself</h2>
+<p>LibreGeoTag is free software under the MIT licence, and its source is public
+at <a href="https://github.com/wichosu/libregeotag">github.com/wichosu/libregeotag</a>.
+Every claim on this page can be checked against the code that makes it true.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or the app:
+<a href="mailto:luiscalderonmiranda@gmail.com">luiscalderonmiranda@gmail.com</a>.</p>
+
+<hr>
+<footer>
+  <p><a href="./">LibreGeoTag</a> · Address data © OpenStreetMap contributors,
+  available under the Open Database License.</p>
+</footer>
+
+</main>
+</body>
+</html>

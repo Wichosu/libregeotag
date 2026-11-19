@@ -49,6 +49,7 @@ lib/
   rendering/                # template painters and image composition
   models/                   # plain data classes
 test/                       # business logic and widget tests
+docs/                       # the GitHub Pages site: privacy policy and landing page
 ```
 
 UI is kept separate from metadata, geocoding, and image-generation logic. There
@@ -134,13 +135,41 @@ ever read.
 Encoding a large JPEG runs off the UI isolate, so the app stays responsive; a
 full-size 12 MP export takes a moment.
 
+## Releasing
+
+Play accepts an Android App Bundle, not an APK:
+
+```sh
+flutter build appbundle --release
+```
+
+The bundle is written to `build/app/outputs/bundle/release/app-release.aab`.
+
+Release builds are signed with your upload key when `android/key.properties`
+exists, and with the debug key when it does not, so a fresh clone still builds
+and only the file you upload needs the real key. To set one up, copy
+`android/key.properties.example` to `android/key.properties` and follow the
+comments in it. Both that file and the keystore itself are ignored by git.
+
+The version comes from `pubspec.yaml` — `version: 0.1.0+1` is the version name
+and the build number. Play requires the build number to increase with every
+upload.
+
+The privacy policy the listing links to lives in `docs/`, served by GitHub
+Pages. Enable it once under **Settings → Pages → Deploy from a branch → main →
+/docs**; the site is then at `https://wichosu.github.io/libregeotag/`.
+
+Two things still need doing before a first upload: the launcher icon is still
+Flutter's default (`android/app/src/main/res/mipmap-*/ic_launcher.png`), and the
+store listing needs screenshots, a feature graphic, and the Data safety form.
+
 ## Privacy
 
 - Location permission is requested only when a location is needed.
 - There is no background location access and no location history.
 - EXIF metadata is read on device.
-- Address lookups send only the coordinates, over HTTPS, and the response is
-  cached for the session.
+- Address lookups send only the coordinates, over HTTPS, and the answer is kept
+  in the editor until the location changes.
 - Generated images are written to the gallery only when you ask for it, and
   contain only the place, note, and date you chose.
 - Sharing goes through the system share sheet. The app itself uploads nothing.

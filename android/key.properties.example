@@ -1,0 +1,15 @@
+# Copy this file to `android/key.properties` and fill in your own values.
+# The real file is ignored by `android/.gitignore`; never commit it.
+#
+# Create the keystore once, and keep it plus these passwords somewhere you will
+# not lose them. Losing the upload key means requesting a key reset from Google;
+# losing the keystore before Play App Signing is set up means losing the app.
+#
+#   keytool -genkey -v -keystore ~/libregeotag-upload.jks \
+#     -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+# Absolute path, or relative to the `android/` directory.
+storeFile=/home/you/libregeotag-upload.jks
+storePassword=change-me
+keyAlias=upload
+keyPassword=change-me

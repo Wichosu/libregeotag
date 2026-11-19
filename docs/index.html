@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LibreGeoTag</title>
+<meta name="description" content="Turn a photograph into a location memory image. Local-first, open source, no account.">
+<style>
+  :root {
+    --ink: #2a241d;
+    --muted: #6f6558;
+    --paper: #fcf8f1;
+    --rule: #e4dccd;
+    --link: #7a4a1d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #ece6dc;
+      --muted: #a49a8c;
+      --paper: #1b1815;
+      --rule: #332e28;
+      --link: #e0a874;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background: var(--paper);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 34rem; }
+  h1 { font-size: 2.4rem; line-height: 1.1; margin: 0 0 .6rem; letter-spacing: -.03em; }
+  p { margin: 0 0 1rem; }
+  .lede { font-size: 1.1rem; }
+  .muted { color: var(--muted); }
+  a { color: var(--link); text-underline-offset: .18em; }
+  ul { list-style: none; padding: 0; margin: 2rem 0 0; border-top: 1px solid var(--rule); }
+  li { border-bottom: 1px solid var(--rule); }
+  li a { display: block; padding: .85rem 0; text-decoration: none; }
+  li a:hover { text-decoration: underline; }
+  li span { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>LibreGeoTag</h1>
+<p class="lede">Give your photographs a place and a story.</p>
+
+<p>LibreGeoTag attaches a place, an optional note, and a date to a photograph and
+renders a new image — either with the text over the picture, or as a postcard
+with a margin and a caption. The original photograph is never modified.</p>
+
+<p class="muted">Local-first: no account, no backend, no analytics, and your
+photographs never leave the device. Only coordinates are sent, and only to look
+up an address. Free software under the MIT licence, for Android.</p>
+
+<ul>
+  <li><a href="privacy-policy.html">Privacy policy <span>— what the app does and does not do with your data</span></a></li>
+  <li><a href="https://github.com/wichosu/libregeotag">Source code <span>— github.com/wichosu/libregeotag</span></a></li>
+</ul>
+
+</main>
+</body>
+</html>
